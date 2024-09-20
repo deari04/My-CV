@@ -43,17 +43,10 @@ class BiodataController extends Controller
             'alamat' => 'required|string',
         ]);        
 
-        // Simpan data ke database
-        // Biodata::create([
-        //     'nama' => $request->input('nama'),
-        //     'keterangan' => $request->input('keterangan'),
-        //     'umur' => $request->input('umur'),
-        //     'alamat' => $request->input('alamat'),
-        // ]);
-
         // simpan data ke database
         Biodata::create($validasi);
-        return view('Biodata.show');
+        return redirect()->route('cv.show');
+
 
     }
 
