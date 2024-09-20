@@ -114,17 +114,19 @@
             <div class="col-sm-6">
               <div class="container-fluid bg-white experience rounded-3 shadow-sm">
                 <h3 class="card-title text-center">Internship</h3>
-                <img src="assets/img/logo/logo_bdi_denpasar.png" alt="logo" style="width: 100px" class="rounded" />
-                <p class="ms-3 mt-2">Aug 2024 - Feb 2025 (6 Months)<br />Balai Diklat Industri Denpasar</p>
-                <img src="assets/img/experience/bdi_denpasar.png" class="img-responsive margin rounded" style="width: 100%" alt="BDI Denpasar" />
+                @foreach ($experience as $experience)
+                  <img src="assets/img/logo/logo_bdi_denpasar.png" alt="logo" style="width: 100px" class="rounded" />
+                  <p class="ms-3 mt-2">{{ $experience->tahun_internship }}<br />{{ $experience->internship }}</p>
+                  <img src="assets/img/experience/bdi_denpasar.png" class="img-responsive margin rounded" style="width: 100%" alt="BDI Denpasar" /> 
               </div>
             </div>
             <div class="col-sm-6">
               <div class="container-fluid bg-white experience rounded-3 shadow-sm">
                 <h3 class="card-title text-center">Organization</h3>
-                <img src="assets/img/logo/logo_ukm.png" alt="logo" style="width: 100px" class="rounded" />
-                <p class="ms-3 mt-2">2022 - 2023 (1st - 3rd Semester)<br />UKM Tenis Meja - Politeknik Negeri Bali</p>
-                <img src="assets/img/experience/table_tennis.png" class="img-responsive margin rounded" style="width: 100%" alt="Tenis Meja" />
+                  <img src="assets/img/logo/logo_ukm.png" alt="logo" style="width: 100px" class="rounded" />
+                  <p class="ms-3 mt-2">{{ $experience->tahun_organization }}<br />{{ $experience->organization }}</p>
+                  <img src="assets/img/experience/table_tennis.png" class="img-responsive margin rounded" style="width: 100%" alt="Tenis Meja" />
+                @endforeach
               </div>
             </div>
           </div>
@@ -140,35 +142,16 @@
             <div class="col-sm-6">
               <div class="container-dark bg-white gap-3 rounded-3 shadow-sm">
                 <h3>Website</h3>
+
                 <div class="row mt-4">
-                  <div class="col">
+                  @foreach ($skill as $skill)
+                  <div class="col-4 pb-5">
                     <img src="assets/img/skills/html.svg" alt="html" width="100px" />
-                    <p class="mt-2">HTML</p>
+                    <p class="mt-2">{{ $skill->nama_skill }}</p>
                   </div>
-                  <div class="col">
-                    <img src="assets/img/skills/css.svg" alt="css" width="100px" />
-                    <p class="mt-2">CSS</p>
-                  </div>
-                  <div class="col">
-                    <img src="assets/img/skills/bootstrap.svg" alt="bootstrap" width="100px" />
-                    <p class="mt-2">Bootstrap</p>
-                  </div>
+                  @endforeach
                 </div>
-                <br />
-                <div class="row mt-4">
-                  <div class="col">
-                    <img src="assets/img/skills/php.svg" alt="php" width="100px" />
-                    <p class="mt-2">PHP</p>
-                  </div>
-                  <div class="col">
-                    <img src="assets/img/skills/laravel.svg" alt="laravel" width="100px" />
-                    <p class="mt-2">Laravel</p>
-                  </div>
-                  <!-- <div class="col">
-                    <img src="assets/img/skills/javascript.svg" alt="javascript" width="100px" />
-                    <p class="mt-2">JavaScript</p>
-                  </div> -->
-                </div>
+                
               </div>
             </div>
             <br>
