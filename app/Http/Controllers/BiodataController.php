@@ -29,6 +29,7 @@ class BiodataController extends Controller
      */
     public function store(Request $request)
     {
+        // menyimpan data dari form biodata
         // dd($request->all());
         // Validasi input
         $validasi = $request->validate([
