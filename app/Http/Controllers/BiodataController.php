@@ -12,6 +12,7 @@ class BiodataController extends Controller
      */
     public function index()
     {
+        // menampilkan form biodata
         return view('Biodata.create');
     }
 
