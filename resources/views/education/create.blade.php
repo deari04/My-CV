@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- ini form biodata --}}
+{{-- ini form education --}}
     <div class="container">        
         <h1>Form Education</h1>
         <form method="POST" action="{{ route('education.store') }}">
