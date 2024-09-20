@@ -12,7 +12,7 @@ class EducationController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -20,7 +20,7 @@ class EducationController extends Controller
      */
     public function create()
     {
-        //
+        return view('Education.create');
     }
 
     /**
@@ -28,7 +28,17 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // menyimpan data dari form education
+        // Validasi input
+        $validasi = $request->validate([
+            'tahun' => 'required|string|max:255',
+            'sekolah' => 'required|string',
+            'jurusan' => 'required|string',
+        ]);        
+
+        // simpan data ke database
+        Education::create($validasi);
+        return view('Education.show');
     }
 
     /**

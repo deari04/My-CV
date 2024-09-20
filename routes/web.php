@@ -9,5 +9,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 // menambahkan route biodata
 Route::resource('/biodata', App\Http\Controllers\BiodataController::class);
+
+// menambahkan route education
+Route::resource('/education', App\Http\Controllers\EducationController::class);

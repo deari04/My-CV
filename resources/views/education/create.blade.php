@@ -4,7 +4,7 @@
 {{-- ini form biodata --}}
     <div class="container">        
         <h1>Form Education</h1>
-        <form method="POST" action="{{ route('biodata.store') }}">
+        <form method="POST" action="{{ route('education.store') }}">
             @csrf
             <div class="mb-3">
                 <label for="tahun" class="form-label">Tahun</label>
