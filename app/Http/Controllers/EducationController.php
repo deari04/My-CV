@@ -38,7 +38,7 @@ class EducationController extends Controller
 
         // simpan data ke database
         Education::create($validasi);
-        return view('Education.show');
+        return view('show');
     }
 
     /**
