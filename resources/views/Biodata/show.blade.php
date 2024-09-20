@@ -2,6 +2,7 @@
 
 @section('content')
         @foreach ($data as $data)
-            <p>{{$data->name}}</p>
+            <p>{{$data->nama}}</p>
+            <p>{{$data->alamat}}</p>
         @endforeach
 @endsection

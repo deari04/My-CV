@@ -15,6 +15,7 @@ class BiodataController extends Controller
   
          // menampilkan data biodata
         $data = Biodata::all();
+        // dd($data);
         return view('Biodata.show', compact('data'));
         
     }
