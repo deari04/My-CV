@@ -12,8 +12,11 @@ class BiodataController extends Controller
      */
     public function index()
     {
-        // menampilkan form biodata
-        return view('Biodata.create');
+  
+         // menampilkan data biodata
+        $data = Biodata::all();
+        return view('Biodata.show', compact('data'));
+        
     }
 
     /**
@@ -21,7 +24,7 @@ class BiodataController extends Controller
      */
     public function create()
     {
-        //
+        return view('Biodata.create');
     }
 
     /**
@@ -46,6 +49,7 @@ class BiodataController extends Controller
         //     'umur' => $request->input('umur'),
         //     'alamat' => $request->input('alamat'),
         // ]);
+
         Biodata::create($validasi);
 
     }
@@ -55,7 +59,7 @@ class BiodataController extends Controller
      */
     public function show(biodata $biodata)
     {
-        //
+
     }
 
     /**
