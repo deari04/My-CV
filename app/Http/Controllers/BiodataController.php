@@ -50,7 +50,9 @@ class BiodataController extends Controller
         //     'alamat' => $request->input('alamat'),
         // ]);
 
+        // simpan data ke database
         Biodata::create($validasi);
+        return view('Biodata.show');
 
     }
 
